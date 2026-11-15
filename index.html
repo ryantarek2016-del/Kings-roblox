@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10152f">
+  <meta name="description" content="الموقع الرسمي لمملكة KINGS ROBLOX">
+  <title>KINGS ROBLOX</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <style>
+    :root{color-scheme:dark;--bg:#080d20;--panel:#151f45;--line:#35478a;--blue:#526fff;--muted:#c5ccef}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 50% -10%,#263c91 0,#0a1230 42%,var(--bg) 78%);color:#fff;font-family:system-ui,Tahoma,Arial,sans-serif}
+    header{text-align:center;padding:30px 16px 22px;background:linear-gradient(180deg,#253a91aa,transparent)}
+    .crown{font-size:48px} h1{margin:4px 0;font-size:clamp(27px,7vw,36px);letter-spacing:1px}
+    header p{margin:8px 0;color:#d8ddff}
+    main{max-width:780px;margin:auto;padding:16px}
+    .hero,.panel,.tile{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#1a2b65ee,#111a3aee);box-shadow:0 12px 30px #0004}
+    .hero{padding:20px}.hero h2,.panel h2{margin:0 0 8px}.muted{color:var(--muted);line-height:1.7}
+    .btn,button{display:inline-block;border:0;border-radius:12px;padding:12px 16px;background:var(--blue);color:white;text-decoration:none;font-weight:750;font-size:15px;cursor:pointer}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #a9b7ff;outline-offset:3px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+    .tile{padding:16px;min-height:120px}.tile .emoji{font-size:27px}.tile b{display:block;margin:7px 0;font-size:17px}
+    .panel{padding:18px;margin-top:14px}.panel[hidden]{display:none}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    input,textarea{width:100%;border:1px solid #46599c;border-radius:12px;background:#0b1431;color:white;padding:12px;font:inherit;margin-top:7px}
+    label{display:block;margin-top:12px;font-weight:700}
+    .messages{height:230px;overflow:auto;background:#0a1230;border:1px solid #334477;border-radius:14px;padding:10px;margin:12px 0}
+    .message{background:#192754;border-radius:12px;padding:9px 11px;margin:7px 0;overflow-wrap:anywhere}
+    .message b{color:#b9c7ff}.note{font-size:13px;color:#ffdf9a;line-height:1.7}
+    footer{text-align:center;color:#9da8d4;padding:25px 12px;font-size:13px}
+    @media(max-width:430px){.grid{gap:9px}.tile{padding:13px}.hero{padding:17px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="crown" aria-hidden="true">👑</div>
+  <h1>KINGS ROBLOX</h1>
+  <p>مملكة الألعاب تبدأ من هنا! 🎮</p>
+</header>
+<main>
+  <section class="hero">
+    <h2>أهلاً بك في مملكة كينجز!</h2>
+    <p class="muted">تابع أخبار القناة، واستعد للمغامرات والتحديات في عالم روبلوكس.</p>
+    <a class="btn" href="#sections">اكتشف المملكة</a>
+  </section>
+
+  <section id="sections" class="grid" aria-label="أقسام التطبيق">
+    <article class="tile"><span class="emoji">🎬</span><b>مقاطع القناة</b><span class="muted">ضع رابط قناة YouTube ليظهر هنا.</span><div class="actions"><button type="button" data-open="videos">فتح القسم</button></div></article>
+    <article class="tile"><span class="emoji">🎮</span><b>ألعاب روبلوكس</b><span class="muted">اكتشف الألعاب والتحديات.</span><div class="actions"><a class="btn" href="https://www.roblox.com/discover" target="_blank" rel="noopener">استكشف Roblox</a></div></article>
+    <article class="tile"><span class="emoji">📢</span><b>الأخبار</b><span class="muted">إعلانات وتحديثات KINGS ROBLOX.</span><div class="actions"><button type="button" data-open="news">فتح القسم</button></div></article>
+    <article class="tile"><span class="emoji">👑</span><b>عن مستر بارني</b><span class="muted">صاحب المملكة وقائد الفريق!</span><div class="actions"><button type="button" data-open="about">اعرف أكثر</button></div></article>
+    <article class="tile"><span class="emoji">💬</span><b>شات المملكة</b><span class="muted">واجهة تجريبية لغرفة عامة.</span><div class="actions"><button type="button" data-open="chat">افتح الشات</button></div></article>
+    <article class="tile"><span class="emoji">🏆</span><b>التحديات</b><span class="muted">قريبًا: تحديات ومسابقات الأعضاء.</span></article>
+  </section>
+
+  <section class="panel" id="videos" hidden>
+    <h2>🎬 مقاطع القناة</h2><p class="muted">أرسل رابط قناتك أو مقطعك لنضيفه هنا.</p>
+  </section>
+  <section class="panel" id="news" hidden>
+    <h2>📢 أخبار المملكة</h2><p class="muted">لا توجد إعلانات جديدة حاليًا. سيضيف مالك الموقع الأخبار عند تجهيزها.</p>
+  </section>
+  <section class="panel" id="about" hidden>
+    <h2>👑 عن مستر بارني</h2><p class="muted">مرحبًا بك في مملكة KINGS ROBLOX — مكان الألعاب والتحديات وروح الفريق!</p>
+  </section>
+  <section class="panel" id="chat" hidden>
+    <h2>💬 شات KINGS ROBLOX — الغرفة العامة</h2>
+    <p class="note">هذه نسخة تجريبية: الرسائل تُحفظ على هذا الجهاز والمتصفح فقط، ولا يراها بقية الأعضاء. الشات المباشر بين الجميع يحتاج إعداد خادم وقاعدة بيانات آمنة.</p>
+    <label for="nickname">اسمك داخل الشات</label>
+    <input id="nickname" maxlength="20" autocomplete="nickname" placeholder="اكتب اسمًا مستعارًا">
+    <div id="messages" class="messages" aria-live="polite"></div>
+    <label for="message">رسالتك</label>
+    <textarea id="message" rows="2" maxlength="300" placeholder="اكتب رسالة محترمة..."></textarea>
+    <div class="actions"><button id="send" type="button">إرسال الرسالة</button><button id="clear" type="button">مسح رسائلي من هذا الجهاز</button></div>
+    <p class="note">لا تكتب كلمة مرورك أو رقمك أو عنوانك أو أي معلومات خاصة. كن محترمًا، ولا تشارك بياناتك الشخصية.</p>
+  </section>
+</main>
+<footer>© KINGS ROBLOX · صُنع بحب لمستر بارني ❤️</footer>
+<script>
+  const panels = [...document.querySelectorAll('.panel')];
+  document.querySelectorAll('[data-open]').forEach(btn => btn.addEventListener('click', () => {
+    panels.forEach(p => p.hidden = p.id !== btn.dataset.open);
+    document.getElementById(btn.dataset.open).scrollIntoView({behavior:'smooth',block:'start'});
+  }));
+  const storeKey = 'kings-roblox-chat-demo-v1';
+  const messagesEl = document.getElementById('messages');
+  const nicknameEl = document.getElementById('nickname');
+  const messageEl = document.getElementById('message');
+  function getMessages(){try{return JSON.parse(localStorage.getItem(storeKey)||'[]')}catch{return []}}
+  function renderMessages(){
+    messagesEl.replaceChildren();
+    getMessages().forEach(item => {
+      const row=document.createElement('div'); row.className='message';
+      const name=document.createElement('b'); name.textContent=item.name+': ';
+      const body=document.createElement('span'); body.textContent=item.text;
+      row.append(name,body); messagesEl.append(row);
+    });
+    messagesEl.scrollTop=messagesEl.scrollHeight;
+  }
+  document.getElementById('send').addEventListener('click', () => {
+    const name=nicknameEl.value.trim().slice(0,20);
+    const body=messageEl.value.trim().slice(0,300);
+    if(!name || !body){alert('اكتب اسمًا مستعارًا ورسالة أولاً.');return;}
+    const list=getMessages(); list.push({name,text:body,at:Date.now()});
+    try{localStorage.setItem(storeKey,JSON.stringify(list.slice(-100)));}
+    catch{alert('تعذر حفظ الرسالة على هذا الجهاز.');return;}
+    messageEl.value=''; renderMessages();
+  });
+  document.getElementById('clear').addEventListener('click', () => {
+    if(confirm('هل تريد مسح رسائل الشات التجريبية من هذا الجهاز؟')){localStorage.removeItem(storeKey);renderMessages();}
+  });
+  renderMessages();
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+  }
+</script>
+</body>
+</html>
